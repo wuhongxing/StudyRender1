@@ -40,6 +40,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(AnotherViewController(), animated: true)
         case 1:
             navigationController?.pushViewController(ShadowCornerViewController(), animated: true)
+        case 2:
+            navigationController?.pushViewController(AsyncViewController(), animated: true)
         default: break
         }
     }

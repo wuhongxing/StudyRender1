@@ -78,10 +78,19 @@ class AnotherViewController: UIViewController {
          let view = UIView(frame: CGRect(x: 220, y: 600, width: 100, height: 100))
         view.layer.shadowColor = UIColor.red.cgColor
         view.layer.shadowOpacity = 1
-        view.backgroundColor = UIColor.tintColor
+        view.backgroundColor = UIColor.orange
         view.layer.cornerRadius = 50
         let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 50, height: 50))
         view.layer.shadowPath = path.cgPath
+        return view
+    }()
+    
+    // 这样写不可以
+    let bezierView: UIView = {
+         let view = UIView(frame: CGRect(x: 220, y: 720, width: 100, height: 100))
+        let path = UIBezierPath(arcCenter: CGPoint(x: 50, y: 50), radius: 40, startAngle: 0, endAngle: .pi * 2, clockwise: true)
+        UIColor.red.setFill()
+        path.fill()
         return view
     }()
     
@@ -93,10 +102,17 @@ class AnotherViewController: UIViewController {
         // 当我们只是单纯的设置 image 或者 backgroundcolor 的时候
         // 这个时候是不会触发离屏渲染的
         // 设置 background = .clear 的时候也是不会触发离屏渲染的
-        imageView.image = UIImage(named: "wechatPay")
-        imageView.backgroundColor = UIColor.clear
-        imageView.clipsToBounds = true
+        // 所以看网上很多说图片必须要同时设置两个值后会产生离屏渲染错的离谱
+        // 然后必须要在子线程 clip 到主线程中再显示
+//        imageView.backgroundColor = UIColor.red
+//        imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 50
+        imageView.layer.masksToBounds = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            self.imageView.image = UIImage(named: "wechatPay")
+            // 这里无论是大图还是小图，都是不会
+            self.imageView.image = UIImage(named: "test")
+        }
         
         view.addSubview(button)
         button.setTitle("TEST", for: .normal)
@@ -129,6 +145,7 @@ class AnotherViewController: UIViewController {
         view.addSubview(mulView)
         view.addSubview(cornerView)
         view.addSubview(shadowCornerView)
+        view.addSubview(bezierView)
     }
     
     @objc private func test() {
