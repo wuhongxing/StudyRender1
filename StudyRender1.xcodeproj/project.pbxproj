@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B3747CD27B0C3A200E7CE78 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3747CC27B0C3A200E7CE78 /* AnotherViewController.swift */; };
 		1B7E5E9B27ACCDFD007B50A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5E9A27ACCDFD007B50A1 /* AppDelegate.swift */; };
 		1B7E5E9D27ACCDFD007B50A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5E9C27ACCDFD007B50A1 /* SceneDelegate.swift */; };
 		1B7E5E9F27ACCDFD007B50A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5E9E27ACCDFD007B50A1 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		1B7E5EB227ACCDFF007B50A1 /* StudyRender1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5EB127ACCDFF007B50A1 /* StudyRender1Tests.swift */; };
 		1B7E5EBC27ACCDFF007B50A1 /* StudyRender1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5EBB27ACCDFF007B50A1 /* StudyRender1UITests.swift */; };
 		1B7E5EBE27ACCDFF007B50A1 /* StudyRender1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5EBD27ACCDFF007B50A1 /* StudyRender1UITestsLaunchTests.swift */; };
+		1B7E5ECD27AE05DD007B50A1 /* RedPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5ECC27AE05DD007B50A1 /* RedPacket.swift */; };
+		1B7E5ECF27AEC66A007B50A1 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5ECE27AEC66A007B50A1 /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B3747CC27B0C3A200E7CE78 /* AnotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
 		1B7E5E9727ACCDFD007B50A1 /* StudyRender1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyRender1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7E5E9A27ACCDFD007B50A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B7E5E9C27ACCDFD007B50A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		1B7E5EB727ACCDFF007B50A1 /* StudyRender1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyRender1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7E5EBB27ACCDFF007B50A1 /* StudyRender1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRender1UITests.swift; sourceTree = "<group>"; };
 		1B7E5EBD27ACCDFF007B50A1 /* StudyRender1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRender1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B7E5ECC27AE05DD007B50A1 /* RedPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedPacket.swift; sourceTree = "<group>"; };
+		1B7E5ECE27AEC66A007B50A1 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +108,13 @@
 				1B7E5E9A27ACCDFD007B50A1 /* AppDelegate.swift */,
 				1B7E5E9C27ACCDFD007B50A1 /* SceneDelegate.swift */,
 				1B7E5E9E27ACCDFD007B50A1 /* ViewController.swift */,
+				1B3747CC27B0C3A200E7CE78 /* AnotherViewController.swift */,
+				1B7E5ECC27AE05DD007B50A1 /* RedPacket.swift */,
 				1B7E5EA027ACCDFD007B50A1 /* Main.storyboard */,
 				1B7E5EA327ACCDFF007B50A1 /* Assets.xcassets */,
 				1B7E5EA527ACCDFF007B50A1 /* LaunchScreen.storyboard */,
 				1B7E5EA827ACCDFF007B50A1 /* Info.plist */,
+				1B7E5ECE27AEC66A007B50A1 /* ProgressBar.swift */,
 			);
 			path = StudyRender1;
 			sourceTree = "<group>";
@@ -259,7 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7E5E9F27ACCDFD007B50A1 /* ViewController.swift in Sources */,
+				1B7E5ECD27AE05DD007B50A1 /* RedPacket.swift in Sources */,
+				1B3747CD27B0C3A200E7CE78 /* AnotherViewController.swift in Sources */,
 				1B7E5E9B27ACCDFD007B50A1 /* AppDelegate.swift in Sources */,
+				1B7E5ECF27AEC66A007B50A1 /* ProgressBar.swift in Sources */,
 				1B7E5E9D27ACCDFD007B50A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 89D9H2QAX2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StudyRender1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 89D9H2QAX2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StudyRender1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
