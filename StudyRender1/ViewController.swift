@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private let dataSource = ["-圆角"]
+    private let dataSource = ["-圆角", "-cell阴影圆角", "-异步绘制"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             navigationController?.pushViewController(AnotherViewController(), animated: true)
         case 1:
-            break
+            navigationController?.pushViewController(ShadowCornerViewController(), animated: true)
         default: break
         }
     }

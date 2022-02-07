@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1B3747CD27B0C3A200E7CE78 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3747CC27B0C3A200E7CE78 /* AnotherViewController.swift */; };
+		1B3747CF27B0E09700E7CE78 /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3747CE27B0E09700E7CE78 /* AsyncViewController.swift */; };
+		1B3747D127B0E2CC00E7CE78 /* ShadowCornerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3747D027B0E2CC00E7CE78 /* ShadowCornerViewController.swift */; };
 		1B7E5E9B27ACCDFD007B50A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5E9A27ACCDFD007B50A1 /* AppDelegate.swift */; };
 		1B7E5E9D27ACCDFD007B50A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5E9C27ACCDFD007B50A1 /* SceneDelegate.swift */; };
 		1B7E5E9F27ACCDFD007B50A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E5E9E27ACCDFD007B50A1 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		1B3747CC27B0C3A200E7CE78 /* AnotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
+		1B3747CE27B0E09700E7CE78 /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncViewController.swift; sourceTree = "<group>"; };
+		1B3747D027B0E2CC00E7CE78 /* ShadowCornerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCornerViewController.swift; sourceTree = "<group>"; };
 		1B7E5E9727ACCDFD007B50A1 /* StudyRender1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyRender1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7E5E9A27ACCDFD007B50A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B7E5E9C27ACCDFD007B50A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				1B7E5E9C27ACCDFD007B50A1 /* SceneDelegate.swift */,
 				1B7E5E9E27ACCDFD007B50A1 /* ViewController.swift */,
 				1B3747CC27B0C3A200E7CE78 /* AnotherViewController.swift */,
+				1B3747CE27B0E09700E7CE78 /* AsyncViewController.swift */,
+				1B3747D027B0E2CC00E7CE78 /* ShadowCornerViewController.swift */,
 				1B7E5ECC27AE05DD007B50A1 /* RedPacket.swift */,
 				1B7E5EA027ACCDFD007B50A1 /* Main.storyboard */,
 				1B7E5EA327ACCDFF007B50A1 /* Assets.xcassets */,
@@ -269,7 +275,9 @@
 			files = (
 				1B7E5E9F27ACCDFD007B50A1 /* ViewController.swift in Sources */,
 				1B7E5ECD27AE05DD007B50A1 /* RedPacket.swift in Sources */,
+				1B3747D127B0E2CC00E7CE78 /* ShadowCornerViewController.swift in Sources */,
 				1B3747CD27B0C3A200E7CE78 /* AnotherViewController.swift in Sources */,
+				1B3747CF27B0E09700E7CE78 /* AsyncViewController.swift in Sources */,
 				1B7E5E9B27ACCDFD007B50A1 /* AppDelegate.swift in Sources */,
 				1B7E5ECF27AEC66A007B50A1 /* ProgressBar.swift in Sources */,
 				1B7E5E9D27ACCDFD007B50A1 /* SceneDelegate.swift in Sources */,

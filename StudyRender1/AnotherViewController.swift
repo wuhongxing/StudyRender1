@@ -73,6 +73,18 @@ class AnotherViewController: UIViewController {
         return view
     }()
     
+    // 直接设置圆角和阴影也是不会发生离屏渲染的
+    let shadowCornerView: UIView = {
+         let view = UIView(frame: CGRect(x: 220, y: 600, width: 100, height: 100))
+        view.layer.shadowColor = UIColor.red.cgColor
+        view.layer.shadowOpacity = 1
+        view.backgroundColor = UIColor.tintColor
+        view.layer.cornerRadius = 50
+        let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 50, height: 50))
+        view.layer.shadowPath = path.cgPath
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -116,6 +128,7 @@ class AnotherViewController: UIViewController {
         
         view.addSubview(mulView)
         view.addSubview(cornerView)
+        view.addSubview(shadowCornerView)
     }
     
     @objc private func test() {
