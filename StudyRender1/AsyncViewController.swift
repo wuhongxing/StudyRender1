@@ -13,6 +13,8 @@ class AsyncViewController: UIViewController {
     private lazy var myview: MyView = {
         let view = MyView(frame: CGRect(x: 0, y: 100, width: view.bounds.width, height: 500))
         view.backgroundColor = .cyan
+        // TODO: 后期要研究一下这个绘制到底是什么用的？
+        view.layer.drawsAsynchronously = true
         return view
     }()
     
@@ -30,11 +32,15 @@ class AsyncViewController: UIViewController {
 }
 
 class MyView: UIView {
-//    override class var layerClass: AnyClass {
-//        return MyLayer.self
-//    }
+    override class var layerClass: AnyClass {
+        return MyLayer.self
+    }
     
 //    override func display(_ layer: CALayer) {
+//
+//    }
+    
+//    override func draw(_ layer: CALayer, in ctx: CGContext) {
 //
 //    }
     
@@ -43,16 +49,15 @@ class MyView: UIView {
     // 能不用这个方法就不要用这个方法
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        context?.addArc(center: CGPoint(x: 50, y: 50), radius: 40, startAngle: 0, endAngle: .pi * 2, clockwise: true)
+        context?.addArc(center: CGPoint(x: 100, y: 100), radius: 50, startAngle: 0, endAngle: .pi * 2, clockwise: true)
         context?.setFillColor(UIColor.red.cgColor)
-//        let path = UIBezierPath(arcCenter: CGPoint(x: 50, y: 50), radius: 40, startAngle: 0, endAngle: .pi * 2, clockwise: true)
-//        UIColor.red.setFill()
-//        path.fill()
+        context?.fillPath()
+       
     }
 }
 
 class MyLayer: CALayer {
-    override func display() {
-        
-    }
+//    override func display() {
+//        delegate?.display?(self)
+//    }
 }

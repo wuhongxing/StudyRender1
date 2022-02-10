@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private let dataSource = ["-圆角", "-cell阴影圆角", "-异步绘制"]
+    private let dataSource = ["-圆角", "-cell阴影圆角", "-异步绘制", "-Quartz", "-GStore"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(ShadowCornerViewController(), animated: true)
         case 2:
             navigationController?.pushViewController(AsyncViewController(), animated: true)
+        case 3:
+            navigationController?.pushViewController(QuartzViewController(), animated: true)
+        case 4: navigationController?.pushViewController(ClockViewController(), animated: true)
         default: break
         }
     }

@@ -93,6 +93,9 @@ class BaseCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
+        let view = UIView(frame: CGRect(x: 0, y: 20, width: subView.bounds.width, height: 20))
+        view.backgroundColor = .orange
+        subView.addSubview(view)
         subView.backgroundColor = .white
         contentView.addSubview(subView)
     }
@@ -134,6 +137,7 @@ class LastCell: BaseCell {
         shapeLayer.path = path.cgPath
         shapeLayer.fillColor = UIColor.white.cgColor
         subView.backgroundColor = .clear
+        shapeLayer.zPosition = -1
         subView.layer.addSublayer(shapeLayer)
     }
     

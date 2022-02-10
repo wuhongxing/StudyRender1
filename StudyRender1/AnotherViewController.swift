@@ -89,8 +89,48 @@ class AnotherViewController: UIViewController {
     let bezierView: UIView = {
          let view = UIView(frame: CGRect(x: 220, y: 720, width: 100, height: 100))
         let path = UIBezierPath(arcCenter: CGPoint(x: 50, y: 50), radius: 40, startAngle: 0, endAngle: .pi * 2, clockwise: true)
-        UIColor.red.setFill()
-        path.fill()
+//        UIColor.red.setFill()
+//        path.fill()
+        return view
+    }()
+    
+    lazy var progress: UIView = {
+        let view = UIView(frame: CGRect(x: 100, y: 720, width: 200, height: 20))
+        view.backgroundColor = UIColor.orange
+        view.layer.cornerRadius = 10
+        for i in 0 ..< 5 {
+            let layer = CALayer()
+            layer.setAffineTransform(CGAffineTransform(rotationAngle: .pi / 3))
+            layer.frame = CGRect(x: i * 40, y: 0, width: 20, height: 20)
+            layer.backgroundColor = UIColor.red.cgColor
+            view.layer.addSublayer(layer)
+        }
+        let layer = CAGradientLayer()
+        layer.locations = [0, 1]
+        layer.startPoint = CGPoint(x: 0, y: 0.5)
+        layer.endPoint = CGPoint(x: 1, y: 0.5)
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        layer.frame = view.bounds
+        view.layer.mask = layer
+        return view
+    }()
+    
+    // 画一段虚线
+    lazy var dashLineView: UIView = {
+        let view = UIView(frame: CGRect(x: 10, y: 100, width: 80, height: 200))
+        view.backgroundColor = UIColor.orange
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.lineWidth = 2
+        shapeLayer.lineDashPattern = [5, 5]
+        // TODO: 如果这里使用 CGMutablePath 是会造成内存泄露的
+        // 而在 Swift 中是完全不允许使用 MRC 的
+        // 也就是说 CGPathRelease 是不能使用的
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: view.bounds.minX + 10, y: view.bounds.minY))
+        path.addLine(to: CGPoint(x: view.bounds.minX + 10, y: view.bounds.maxY))
+        shapeLayer.path = path
+        view.layer.addSublayer(shapeLayer)
         return view
     }()
     
@@ -146,6 +186,8 @@ class AnotherViewController: UIViewController {
         view.addSubview(cornerView)
         view.addSubview(shadowCornerView)
         view.addSubview(bezierView)
+        view.addSubview(progress)
+        view.addSubview(dashLineView)
     }
     
     @objc private func test() {
